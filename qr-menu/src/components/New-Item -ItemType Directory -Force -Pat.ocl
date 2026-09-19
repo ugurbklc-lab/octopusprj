@@ -1,0 +1,28 @@
+New-Item -ItemType Directory -Force -Path ".octopus"
+New-Item -ItemType File -Path ".octopus/deployment_process.ocl"
+step "run-a-script" {
+    name = "Run a Script Step"
+
+    action {
+        action_type = "Octopus.Script"
+        properties = {
+            "Octopus.Action.RunOnServer" = "true"
+            "Octopus.Action.Script.ScriptBody" = "Write-Host 'Hello from VS Code and Octopus Deploy!'"
+            "Octopus.Action.Script.ScriptSource" = "Inline"
+            "Octopus.Action.Script.Syntax" = "PowerShell"
+        }
+    }
+}
+
+step "deploy-a-package" {
+    name = "Deploy Web Application"
+
+    action {
+        action_type = "Octopus.IIS"
+        properties = {
+            "Octopus.Action.EnabledFeatures" = "Octopus.Features.IISWebSite"
+            "Octopus.Action.IISWebSite.ApplicationPoolName" = "MyAppPool"
+            "Octopus.Action.IISWebSite.WebSiteName" = "MySite"
+        }
+    }
+}
