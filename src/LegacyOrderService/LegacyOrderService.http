@@ -1,0 +1,6 @@
+@LegacyOrderService_HostAddress = http://localhost:5199
+
+GET {{LegacyOrderService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

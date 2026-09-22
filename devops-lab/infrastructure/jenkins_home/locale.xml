@@ -1,0 +1,6 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<locale plugin="locale@641.v84f22d75fd8b_">
+  <systemLocale>USE_BROWSER_LOCALE</systemLocale>
+  <ignoreAcceptLanguage>true</ignoreAcceptLanguage>
+  <allowUserPreferences>false</allowUserPreferences>
+</locale>
