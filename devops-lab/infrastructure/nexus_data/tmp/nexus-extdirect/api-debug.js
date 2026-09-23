@@ -41,12 +41,12 @@ NX.direct.api.REMOTING_API = {
         formHandler: false
       },
       {
-        name: 'enable'/*(String) => void */,
+        name: 'disable'/*(String) => void */,
         len: 1,
         formHandler: false
       },
       {
-        name: 'disable'/*(String) => void */,
+        name: 'enable'/*(String) => void */,
         len: 1,
         formHandler: false
       },
@@ -223,13 +223,13 @@ NX.direct.api.REMOTING_API = {
         formHandler: false
       },
       {
-        name: 'canDeleteFolder'/*(String, String) => boolean */,
-        len: 2,
+        name: 'deleteComponent'/*(String) => java.util.Set */,
+        len: 1,
         formHandler: false
       },
       {
-        name: 'deleteComponent'/*(String) => java.util.Set */,
-        len: 1,
+        name: 'canDeleteFolder'/*(String, String) => boolean */,
+        len: 2,
         formHandler: false
       },
       {
@@ -643,13 +643,13 @@ NX.direct.api.REMOTING_API = {
     ],
     coreui_Repository: [
       {
-        name: 'getBrowseableFormats'/*() => java.util.List */,
-        len: 0,
+        name: 'readReferencesAddingEntriesForAllFormats'/*(org.sonatype.nexus.extdirect.model.StoreLoadParameters) => java.util.List */,
+        len: 1,
         formHandler: false
       },
       {
-        name: 'readReferencesAddingEntriesForAllFormats'/*(org.sonatype.nexus.extdirect.model.StoreLoadParameters) => java.util.List */,
-        len: 1,
+        name: 'getBrowseableFormats'/*() => java.util.List */,
+        len: 0,
         formHandler: false
       },
       {

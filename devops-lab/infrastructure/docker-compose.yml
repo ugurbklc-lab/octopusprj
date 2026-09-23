@@ -1,3 +1,8 @@
+x-dns-config: &default-dns
+  dns:
+    - 8.8.8.8
+    - 1.1.1.1
+
 networks:
   ci-network:
     driver: bridge
@@ -49,6 +54,7 @@ services:
   # 3. Jenkins (CI Automation Server)
   # ==========================================
   jenkins:
+    <<: *default-dns
     image: jenkins/jenkins:lts-jdk17
     container_name: jenkins
     restart: unless-stopped
@@ -59,6 +65,7 @@ services:
       - "50000:50000"
     environment:
       - DOCKER_TLS_CERTDIR=
+      - JAVA_OPTS=-Xmx2g -Xms512m
     volumes:
       - ./jenkins_home:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock

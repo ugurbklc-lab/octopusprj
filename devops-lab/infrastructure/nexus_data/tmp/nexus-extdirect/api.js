@@ -32,12 +32,12 @@ NX.direct.api.REMOTING_API = {
         formHandler: false
       },
       {
-        name: 'enable',
+        name: 'disable',
         len: 1,
         formHandler: false
       },
       {
-        name: 'disable',
+        name: 'enable',
         len: 1,
         formHandler: false
       },
@@ -214,13 +214,13 @@ NX.direct.api.REMOTING_API = {
         formHandler: false
       },
       {
-        name: 'canDeleteFolder',
-        len: 2,
+        name: 'deleteComponent',
+        len: 1,
         formHandler: false
       },
       {
-        name: 'deleteComponent',
-        len: 1,
+        name: 'canDeleteFolder',
+        len: 2,
         formHandler: false
       },
       {
@@ -634,13 +634,13 @@ NX.direct.api.REMOTING_API = {
     ],
     coreui_Repository: [
       {
-        name: 'getBrowseableFormats',
-        len: 0,
+        name: 'readReferencesAddingEntriesForAllFormats',
+        len: 1,
         formHandler: false
       },
       {
-        name: 'readReferencesAddingEntriesForAllFormats',
-        len: 1,
+        name: 'getBrowseableFormats',
+        len: 0,
         formHandler: false
       },
       {
