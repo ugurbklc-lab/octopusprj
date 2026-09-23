@@ -11,6 +11,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+// ⚠️ TEST: SonarQube için bilerek eklenen hatalar
+string unusedVariable = "Bu değişken hiçbir yerde kullanılmıyor"; // Unused Variable (Code Smell)
+string hardcodedPassword = "AdminPassword123!"; // Hardcoded Credentials (Security Hotspot)
+
 app.MapGet("/", () => "AuthService is Running!");
 
 app.Run();
