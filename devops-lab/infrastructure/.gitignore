@@ -1,0 +1,7 @@
+# Docker persistent volume data
+**/jenkins_home/
+**/nexus_data/
+**/postgres_data/
+**/sonarqube_data/
+**/sonarqube_extensions/
+**/sonarqube_logs/
